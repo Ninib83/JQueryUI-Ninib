@@ -1,0 +1,49 @@
+﻿<div class="col-md-12">
+    <h1 ng-bind="title"></h1>
+</div>
+<br />
+<div class="col-md-12">
+    <progressbar id="1" value="1"></progressbar>
+</div>
+<br />
+<div class="col-md-12">
+    <div class="col-md-4">
+        <form ng-submit="addNote()">
+            <div class="form-group">
+                <input type="text" ng-model="newNote.title" class="form-control" placeholder="title" />
+
+            </div>
+            <div class="form-group">
+                <textarea type="text" 
+                       ng-model="newNote.description" 
+                       class="form-control" 
+                       placeholder="description" />
+
+            </div>
+
+            <button type="submit"
+                    class="btn btn-success">
+                Create a new note
+            </button>
+        </form>     
+    </div> 
+    <div class="col-md-4">
+        <garbage id="1"></garbage>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-4">
+        <draggable id="note.id"
+                   title="note.title"
+                   description="note.description"
+                   ng-repeat="note in data.notes track by $index">
+        </draggable>
+
+    </div>
+
+    <div class="col-md-8">
+        <droppable id="1" body="'ToDo'"></droppable>
+        <droppable id="2" body="'WIP'"></droppable>
+        <droppable id="3" body="'Done'"></droppable>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+﻿.garbage-box {
+    width: 70px;
+    height: 100px;
+    padding: 0.5em;
+    float: left;
+    margin: 10px;
+
+}
+.glyphicon-trash{
+    font-size:8em;
+    position:absolute; 
+    left:19px; 
+    top:17px;
+}
